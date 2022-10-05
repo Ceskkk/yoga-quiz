@@ -1,16 +1,18 @@
 import { useState } from 'react'
 
-import poses from '../data/poses.json'
 import useCounter from '../hooks/useCounter'
+import poses from '../data/poses.json'
 
 import styles from '../styles/Quiz.module.css'
 
-export const NUMBER_OF_QUESTIONS = 10
+export const NUMBER_OF_QUESTIONS = 9
 export const NUMBER_OF_ANSWERS = 4
 
 export default function Quiz () {
   const [questions, setQuestions] = useState(undefined)
   const [correctQuestion, setCorrectQuestion] = useState(undefined)
+
+  const [questionsAlreadyUsed, setQuestionsAlreadyUsed] = useState([])
 
   const [isQuizOn, setQuiz] = useState(false)
 
@@ -18,34 +20,42 @@ export default function Quiz () {
   const correctAnswers = useCounter(0)
 
   const startQuiz = () => {
-    resetCounters()
-    getNewQuestions()
+    setQuestionsAlreadyUsed([])
+    currentQuestion.reset()
+    correctAnswers.reset()
+    updateQuestions()
     setQuiz(true)
   }
 
-  const resetCounters = () => {
-    currentQuestion.reset()
-    correctAnswers.reset()
-  }
+  const updateQuestions = () => {
+    let correct
+    const otherQuestions = new Set()
 
-  const getNewQuestions = () => {
-    const differentNumbers = new Set()
-    const correct = Math.floor(Math.random() * (NUMBER_OF_ANSWERS - 1))
-    while (differentNumbers.size < NUMBER_OF_ANSWERS) {
-      differentNumbers.add(Math.floor(Math.random() * poses.length))
+    while (correct === undefined || questionsAlreadyUsed.includes(correct.id)) {
+      correct = poses[Math.floor(Math.random() * poses.length)]
     }
+
+    console.log(questionsAlreadyUsed)
+
+    while (otherQuestions.size !== NUMBER_OF_ANSWERS - 1) {
+      const random = poses[Math.floor(Math.random() * poses.length)]
+      if (random.id !== correct.id) otherQuestions.add(random)
+    }
+
+    otherQuestions.add(correct)
     setCorrectQuestion(correct)
-    setQuestions(Array.from(differentNumbers))
+    setQuestionsAlreadyUsed((prevValue) => [...prevValue, correct.id])
+    setQuestions(Array.from(otherQuestions).sort((a, b) => a.id - b.id))
   }
 
   const selectAnswer = (answer) => {
-    if (answer === poses[questions[correctQuestion]].name) {
+    if (answer === correctQuestion.name) {
       correctAnswers.increment()
     }
 
     if (currentQuestion.counter < NUMBER_OF_QUESTIONS) {
       currentQuestion.increment()
-      getNewQuestions()
+      updateQuestions()
     } else if (currentQuestion.counter === NUMBER_OF_QUESTIONS) {
       setQuiz(false)
     }
@@ -60,14 +70,15 @@ export default function Quiz () {
         </>
       )}
 
-      <div className={styles.image}>
-        {isQuizOn && <img src={`/assets/${poses[questions[correctQuestion]].image}`} />}
-      </div>
+      {isQuizOn &&
+        <div className={styles.image}>
+          <img src={`/assets/${correctQuestion.image}`} />
+        </div>}
 
       <div className={styles.answers}>
         {isQuizOn && questions.map(q =>
-          <button key={poses[q].id} onClick={() => selectAnswer(poses[q].name)}>
-            {poses[q].name}
+          <button key={q.id} onClick={() => selectAnswer(q.name)}>
+            {q.name}
           </button>
         )}
       </div>
@@ -84,4 +95,5 @@ export default function Quiz () {
   )
 }
 
-// TODO: Salen repetidos
+// TODO: Favicon
+// TODO: Añadir toda la data
