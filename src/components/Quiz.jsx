@@ -34,12 +34,12 @@ export default function Quiz () {
     while (differentNumbers.size < NUMBER_OF_ANSWERS) {
       differentNumbers.add(Math.floor(Math.random() * poses.length))
     }
-    setQuestions(Array.from(differentNumbers))
     setCorrectQuestion(correct)
+    setQuestions(Array.from(differentNumbers))
   }
 
   const selectAnswer = (answer) => {
-    if (answer === poses[correctQuestion].name) {
+    if (answer === poses[questions[correctQuestion]].name) {
       correctAnswers.increment()
     }
 
@@ -61,7 +61,7 @@ export default function Quiz () {
       )}
 
       <div className={styles.image}>
-        {isQuizOn && <img src={`/assets/${poses[correctQuestion].image}`} />}
+        {isQuizOn && <img src={`/assets/${poses[questions[correctQuestion]].image}`} />}
       </div>
 
       <div className={styles.answers}>
@@ -83,3 +83,5 @@ export default function Quiz () {
     </section>
   )
 }
+
+// TODO: Salen repetidos
