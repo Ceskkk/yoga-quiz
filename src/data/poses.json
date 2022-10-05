@@ -1,22 +1,62 @@
 [
   {
     "id": 1,
-    "name": "HASTA UTTHANASANA",
-    "image": "HASTA_UTTHANASANA.jpg"
+    "name": "AKARNA_DHANURASANA",
+    "image": "AKARNA_DHANURASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
   },
   {
     "id": 2,
-    "name": "AKARNA DHANURASANA",
-    "image": "AKARNA_DHANURASANA.jpg"
+    "name": "DWIKONASANA",
+    "image": "DWIKONASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
   },
   {
     "id": 3,
-    "name": "TADASANA",
-    "image": "TADASANA.jpg"
+    "name": "HASTA_UTTHANASANA",
+    "image": "HASTA_UTTHANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
   },
   {
     "id": 4,
-    "name": "TIRYAK TADASANA",
-    "image": "TIRYAK-TADASANA.jpg"
+    "name": "KATI_CHAKRASANA",
+    "image": "KATI_CHAKRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 5,
+    "name": "MERU_PRISHTHASANA",
+    "image": "MERU_PRISHTHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 6,
+    "name": "SAMKONASANA",
+    "image": "SAMKONASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 7,
+    "name": "TADASANA",
+    "image": "TADASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 8,
+    "name": "TIRYAK_KATI_CHAKRASANA",
+    "image": "TIRYAK_KATI_CHAKRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 9,
+    "name": "TIRYAK_TADASANA",
+    "image": "TIRYAK_TADASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 10,
+    "name": "TRIKONASANA",
+    "image": "TRIKONASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE PIE"
   }
 ]
