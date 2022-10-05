@@ -1,0 +1,48 @@
+:root {
+  --primary-soft: #2BBEF2;
+  --primary: #2886F8;
+  --primary-strong: #005af7;
+
+  --secondary: #ED2889;
+
+  --warning-soft: #f56b6b;
+  --warning: #ff3e3e;
+  --warning-strong: #a50000;
+
+  --correct-soft: #60e239;
+  --correct: #0dcc56;
+  --correct-strong: #1ba500;
+
+  --text: black;
+  --text-secondary: white;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+  display: block;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: 'Inter', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}

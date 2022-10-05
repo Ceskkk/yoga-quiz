@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "HASTA UTTHANASANA",
+    "image": "HASTA_UTTHANASANA.jpg"
+  },
+  {
+    "id": 2,
+    "name": "AKARNA DHANURASANA",
+    "image": "AKARNA_DHANURASANA.jpg"
+  },
+  {
+    "id": 3,
+    "name": "TADASANA",
+    "image": "TADASANA.jpg"
+  },
+  {
+    "id": 4,
+    "name": "TIRYAK TADASANA",
+    "image": "TIRYAK-TADASANA.jpg"
+  }
+]
