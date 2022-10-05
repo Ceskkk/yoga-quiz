@@ -60,7 +60,9 @@ export default function Quiz () {
         </>
       )}
 
-      {isQuizOn && <img src={`/assets/${poses[correctQuestion].image}`} />}
+      <div className={styles.image}>
+        {isQuizOn && <img src={`/assets/${poses[correctQuestion].image}`} />}
+      </div>
 
       <div className={styles.answers}>
         {isQuizOn && questions.map(q =>

@@ -14,8 +14,17 @@
   margin: 0;
 }
 
-.container > img {
+.container > .image {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
   margin-top: 2rem;
+}
+
+.container > .image > img {
+  width: auto;
+  height: 100%;
 }
 
 .container > .answers {
