@@ -5,9 +5,9 @@
 
   --secondary: #ED2889;
 
-  --warning-soft: #f56b6b;
-  --warning: #ff3e3e;
-  --warning-strong: #a50000;
+  --incorrect-soft: #f56b6b;
+  --incorrect: #ff3e3e;
+  --incorrect-strong: #a50000;
 
   --correct-soft: #60e239;
   --correct: #0dcc56;
@@ -34,6 +34,7 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
 }
 
 #root {
@@ -45,4 +46,48 @@ body {
 
 button {
   font-family: 'Inter', -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+}
+
+button {
+  padding: 1rem 4rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: unset;
+  color: var(--text-secondary);
+  background-color: var(--primary);
+  box-shadow: 0 4px 0 0 var(--primary-strong);
+}
+
+button:hover {
+  background-color: var(--primary-soft);
+}
+
+button:active {
+  background-color: var(--primary-strong);
+}
+
+button.correct {
+  background-color: var(--correct);
+  box-shadow: 0 4px 0 0 var(--correct-strong);
+}
+
+button.correct:hover {
+  background-color: var(--correct-soft);
+}
+
+button.correct:active {
+  background-color: var(--correct-strong);
+}
+
+button.incorrect {
+  background-color: var(--incorrect);
+  box-shadow: 0 4px 0 0 var(--incorrect-strong);
+}
+
+button.incorrect:hover {
+  background-color: var(--incorrect-soft);
+}
+
+button.incorrect:active {
+  background-color: var(--incorrect-strong);
 }
