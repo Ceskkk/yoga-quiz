@@ -58,5 +58,120 @@
     "name": "TRIKONASANA",
     "image": "TRIKONASANA.jpg",
     "style": "HATHA YOGA - ASANAS DE PIE"
+  },
+  {
+    "id": 12,
+    "name": "ARDHA PADMA PASCHIMOTASANA",
+    "image": "ARDHA_PADMA_PASCHIMOTASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 13,
+    "name": "GATYATMAK PASCHIMOTASANA",
+    "image": "GATYATMAK_PASCHIMOTASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 14,
+    "name": "HASTA PADA ANGUSHTHASANA",
+    "image": "HASTA_PADA_ANGUSHTHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 15,
+    "name": "JANU SIRSHASANA",
+    "image": "JANU_SIRSHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 16,
+    "name": "PADA HASTASANA",
+    "image": "PADA_HASTASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 17,
+    "name": "PADA PRASAR PASCHIMOTASANA",
+    "image": "PADA_PRASAR_PASCHIMOTASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 18,
+    "name": "PASCHIMOTTANASANA",
+    "image": "PASCHIMOTTANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ADELANTE"
+  },
+  {
+    "id": 19,
+    "name": "ARDHA CHANDRASANA",
+    "image": "ARDHA_CHANDRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 20,
+    "name": "ARDHA SHALBHASANA",
+    "image": "ARDHA_SHALBHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 21,
+    "name": "BHUJANGASANA",
+    "image": "BHUJANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 22,
+    "name": "DHANURASANA",
+    "image": "DHANURASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 23,
+    "name": "GOMUKHASANA",
+    "image": "GOMUKHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 24,
+    "name": "GRIVASANA",
+    "image": "GRIVASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 25,
+    "name": "KHANDHARASANA",
+    "image": "KHANDHARASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 26,
+    "name": "SARPASANA",
+    "image": "SARPASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 27,
+    "name": "SETU_ASANA",
+    "image": "SETU_ASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 28,
+    "name": "SHALBHASANA",
+    "image": "SHALBHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 29,
+    "name": "TIRYAK_BHUJANGASANA",
+    "image": "TIRYAK_BHUJANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 30,
+    "name": "UTTHAN_PRISTHASANA",
+    "image": "UTTHAN_PRISTHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
   }
+
 ]

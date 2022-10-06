@@ -41,7 +41,7 @@ export default function QuizProvider ({ children }) {
     setQuestions(Array.from(otherQuestions).sort((a, b) => a.id - b.id))
   }
 
-  const selectAnswer = (e, answer) => {
+  const selectAnswer = (answer) => {
     if (answer === correctQuestion.name) {
       correctAnswersCounter.increment()
     }

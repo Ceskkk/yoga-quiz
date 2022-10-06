@@ -33,7 +33,7 @@ export default function Quiz () {
       {isQuizOn &&
         <div className={styles.answers}>
           {questions.map((q) =>
-            <Button key={q.id} clickHandler={(e) => selectAnswer(e, q.name)}>
+            <Button key={q.id} clickHandler={() => selectAnswer(q.name)}>
               {q.name}
             </Button>
           )}
@@ -54,6 +54,8 @@ export default function Quiz () {
 // TODO: Favicon
 // TODO: Añadir toda la data
 // TODO: Transición
+// TODO: Molarí también que marcara cual es el correcto
+// TODO: Quizás un botón para confirmar
 
 /**
  * Posible features:
