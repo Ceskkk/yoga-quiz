@@ -1,55 +1,64 @@
 import { createContext, useState } from 'react'
-import useCounter from '../hooks/useCounter'
-
+import { NUMBER_OF_ANSWERS } from '../utils/const'
 import poses from '../data/poses.json'
-import { NUMBER_OF_ANSWERS, NUMBER_OF_QUESTIONS } from '../utils/const'
 
 export const QuizContext = createContext()
 
 export default function QuizProvider ({ children }) {
-  const [questions, setQuestions] = useState(undefined)
-  const [correctQuestion, setCorrectQuestion] = useState(undefined)
-  const [questionsIdAlreadyUsed, setQuestionsIdAlreadyUsed] = useState([])
+  const initialQuestionsState = {
+    current: undefined,
+    correct: undefined,
+    used: [0, 1],
+    total: 10,
+    currentCounter: 1,
+    correctCounter: 0
+  }
+  const [questionsState, setQuestionsState] = useState(initialQuestionsState)
   const [isQuizOn, toggleQuiz] = useState(false)
-  const currentQuestionCounter = useCounter(1)
-  const correctAnswersCounter = useCounter(0)
 
   const startQuiz = () => {
-    setQuestionsIdAlreadyUsed([])
-    currentQuestionCounter.reset()
-    correctAnswersCounter.reset()
+    setQuestionsState(initialQuestionsState)
     updateQuestions()
     toggleQuiz(true)
   }
 
   const updateQuestions = () => {
-    let correct
-    const otherQuestions = new Set()
+    let correctQuestion
+    const questions = new Set()
 
-    while (correct === undefined || questionsIdAlreadyUsed.includes(correct.id)) {
-      correct = poses[Math.floor(Math.random() * poses.length)]
+    while (correctQuestion === undefined || Array.from(questionsState.used).includes(correctQuestion.id)) {
+      correctQuestion = poses[Math.floor(Math.random() * poses.length)]
     }
 
-    while (otherQuestions.size !== NUMBER_OF_ANSWERS - 1) {
+    while (questions.size !== NUMBER_OF_ANSWERS - 1) {
       const random = poses[Math.floor(Math.random() * poses.length)]
-      if (random.id !== correct.id) otherQuestions.add(random)
+      if (random.id !== correctQuestion.id) questions.add(random)
     }
 
-    otherQuestions.add(correct)
-    setCorrectQuestion(correct)
-    setQuestionsIdAlreadyUsed((prevValue) => [...prevValue, correct.id])
-    setQuestions(Array.from(otherQuestions).sort((a, b) => a.id - b.id))
+    questions.add(correctQuestion)
+    setQuestionsState(prev => ({
+      ...prev,
+      current: Array.from(questions).sort((a, b) => a.id - b.id),
+      correct: correctQuestion,
+      used: (prevUsed) => [...prevUsed, correctQuestion.id]
+    }))
   }
 
   const selectAnswer = (answer) => {
-    if (answer === correctQuestion.name) {
-      correctAnswersCounter.increment()
+    if (answer === questionsState.correct.name) {
+      setQuestionsState(prev => ({
+        ...prev,
+        correctCounter: questionsState.correctCounter + 1
+      }))
     }
 
-    if (currentQuestionCounter.counter < NUMBER_OF_QUESTIONS) {
-      currentQuestionCounter.increment()
+    if (questionsState.currentCounter < questionsState.total) {
+      setQuestionsState(prev => ({
+        ...prev,
+        currentCounter: questionsState.currentCounter + 1
+      }))
       updateQuestions()
-    } else if (currentQuestionCounter.counter === NUMBER_OF_QUESTIONS) {
+    } else {
       toggleQuiz(false)
     }
   }
@@ -57,11 +66,8 @@ export default function QuizProvider ({ children }) {
   return (
     <QuizContext.Provider
       value={{
-        questions,
-        correctQuestion,
         isQuizOn,
-        currentQuestionCounter,
-        correctAnswersCounter,
+        questionsState,
         selectAnswer,
         startQuiz
       }}

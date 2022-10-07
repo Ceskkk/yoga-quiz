@@ -1,46 +1,41 @@
 import { useContext } from 'react'
 import { QuizContext } from '../context/QuizContext'
-
-import styles from '../styles/Quiz.module.css'
-import { NUMBER_OF_QUESTIONS } from '../utils/const'
 import Button from './Button'
+import styles from '../styles/Quiz.module.css'
 
 export default function Quiz () {
   const {
-    questions,
-    correctQuestion,
     isQuizOn,
-    currentQuestionCounter,
-    correctAnswersCounter,
+    questionsState,
     selectAnswer,
     startQuiz
   } = useContext(QuizContext)
 
   return (
     <section className={styles.container}>
-      {questions && (
+      {questionsState.current && (
         <>
-          <h1>Question {currentQuestionCounter.counter} / {NUMBER_OF_QUESTIONS}</h1>
-          <h3>Correct answers: {correctAnswersCounter.counter}</h3>
+          <h1>Question {questionsState.currentCounter} / {questionsState.total}</h1>
+          <h3>Correct answers: {questionsState.correctCounter}</h3>
         </>
       )}
 
       {isQuizOn &&
         <div className={styles.image}>
-          <img src={`/assets/${correctQuestion.image}`} />
+          <img src={`/assets/${questionsState.correct.image}`} />
         </div>}
 
       {isQuizOn &&
         <div className={styles.answers}>
-          {questions.map((q) =>
+          {questionsState.current.map((q) =>
             <Button key={q.id} clickHandler={() => selectAnswer(q.name)}>
               {q.name}
             </Button>
           )}
         </div>}
 
-      <Button clickHandler={startQuiz} type={questions ? 'incorrect' : 'correct'}>
-        {questions
+      <Button clickHandler={startQuiz} type={questionsState.current ? 'incorrect' : 'correct'}>
+        {questionsState.current
           ? isQuizOn
             ? 'Reset'
             : 'Try again'
