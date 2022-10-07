@@ -6,8 +6,10 @@ import styles from '../styles/Quiz.module.css'
 export default function Quiz () {
   const {
     isQuizOn,
+    isAnswered,
     questionsState,
-    selectAnswer,
+    checkAnswer,
+    nextQuestion,
     startQuiz
   } = useContext(QuizContext)
 
@@ -26,35 +28,35 @@ export default function Quiz () {
         </div>}
 
       {isQuizOn &&
-        <div className={styles.answers}>
+        <div id='answers' className={`${styles.answers} ${isAnswered ? styles.answered : ''}`}>
           {questionsState.current.map((q) =>
-            <Button key={q.id} clickHandler={() => selectAnswer(q.name)}>
+            <Button key={q.id} clickHandler={(e) => checkAnswer(e, q.name)}>
               {q.name}
             </Button>
           )}
         </div>}
 
-      <Button clickHandler={startQuiz} type={questionsState.current ? 'incorrect' : 'correct'}>
-        {questionsState.current
-          ? isQuizOn
-            ? 'Reset'
-            : 'Try again'
-          : 'Start Quiz'}
-      </Button>
+      {!isQuizOn &&
+        <Button clickHandler={startQuiz} type={questionsState.current ? 'incorrect' : 'correct'}>
+          {questionsState.current
+            ? 'Try again'
+            : 'Start Quiz'}
+        </Button>}
+
+      {isAnswered && isQuizOn &&
+        <Button clickHandler={nextQuestion} type='correct'>
+          Next
+        </Button>}
 
     </section>
   )
 }
 
-// TODO: Favicon
-// TODO: Añadir toda la data
-// TODO: Transición
-// TODO: Molarí también que marcara cual es el correcto
-// TODO: Quizás un botón para confirmar
+// TODO: Añadir toda la data | Fotos se alargan mucho
 
 /**
  * Posible features:
- * Escoger el tipo de Yoga del cual hacer el Quiz
- * Dejar elegir el numero de preguntas y de respuestas
- * Botón de descarga del pdf
+ *  - Escoger el tipo de Yoga del cual hacer el Quiz
+ *  - Dejar elegir el numero de preguntas y de respuestas
+ *  - Botón de descarga del pdf
  */

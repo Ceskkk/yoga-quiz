@@ -15,6 +15,7 @@ export default function QuizProvider ({ children }) {
   }
   const [questionsState, setQuestionsState] = useState(initialQuestionsState)
   const [isQuizOn, toggleQuiz] = useState(false)
+  const [isAnswered, toggleAnswered] = useState(false)
 
   const startQuiz = () => {
     setQuestionsState(initialQuestionsState)
@@ -42,16 +43,28 @@ export default function QuizProvider ({ children }) {
       correct: correctQuestion,
       used: (prevUsed) => [...prevUsed, correctQuestion.id]
     }))
+    toggleAnswered(false)
   }
 
-  const selectAnswer = (answer) => {
+  const checkAnswer = (e, answer) => {
     if (answer === questionsState.correct.name) {
+      e.target.classList.add('correct')
       setQuestionsState(prev => ({
         ...prev,
         correctCounter: questionsState.correctCounter + 1
       }))
+    } else {
+      e.target.classList.add('incorrect')
+      Array.from(e.target.parentNode.querySelectorAll('button'))
+        .find(el => el.textContent === questionsState.correct.name)
+        .classList.add('correct')
     }
+    toggleAnswered(true)
+  }
 
+  const nextQuestion = () => {
+    document.querySelectorAll('#answers > button')
+      .forEach(button => button.classList.remove('correct', 'incorrect'))
     if (questionsState.currentCounter < questionsState.total) {
       setQuestionsState(prev => ({
         ...prev,
@@ -67,8 +80,10 @@ export default function QuizProvider ({ children }) {
     <QuizContext.Provider
       value={{
         isQuizOn,
+        isAnswered,
         questionsState,
-        selectAnswer,
+        checkAnswer,
+        nextQuestion,
         startQuiz
       }}
     > {children}

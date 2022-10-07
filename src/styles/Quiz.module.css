@@ -37,6 +37,14 @@
   margin: 3rem;
 }
 
+.container > .answers.answered {
+  pointer-events: none;
+}
+
+.container > .answers.answered > button {
+  transition: 0.7s;
+}
+
 @media(max-width: 600px) {
   .container > .answers {
     grid-template-columns: 1fr;
