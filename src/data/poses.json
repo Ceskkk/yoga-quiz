@@ -172,6 +172,371 @@
     "name": "UTTHAN PRISTHASANA",
     "image": "UTTHAN_PRISTHASANA.jpg",
     "style": "HATHA YOGA - ASANAS DE FLEXIÓN HACIA ATRAS"
+  },
+  {
+    "id": 31,
+    "name": "ARDHA PADMASANA",
+    "image": "ARDHA_PADMASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 32,
+    "name": "PADMASANA",
+    "image": "PADMASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 33,
+    "name": "SIDDHASANA",
+    "image": "SIDDHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 34,
+    "name": "SIDHA YONI ASANA",
+    "image": "SIDHA_YONI_ASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 35,
+    "name": "SUKHASANA",
+    "image": "SUKHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 36,
+    "name": "SWASTIKASANA",
+    "image": "SWASTIKASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE MEDITACIÓN"
+  },
+  {
+    "id": 37,
+    "name": "ARDHA MATSYENDRASANA",
+    "image": "ARDHA_MATSYENDRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS SENTADAS DE TORSIÓN ESPINAL"
+  },
+  {
+    "id": 38,
+    "name": "BHU NAMANASANA",
+    "image": "BHU_NAMANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS SENTADAS DE TORSIÓN ESPINAL"
+  },
+  {
+    "id": 39,
+    "name": "MERU WAKRASANA",
+    "image": "MERU_WAKRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS SENTADAS DE TORSIÓN ESPINAL"
+  },
+  {
+    "id": 40,
+    "name": "PARIVRITTI JANU SIRHASANA",
+    "image": "PARIVRITTI_JANU_SIRHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS SENTADAS DE TORSIÓN ESPINAL"
+  },
+  {
+    "id": 41,
+    "name": "ANAND MADIRASANA",
+    "image": "ANAND_MADIRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 42,
+    "name": "ARDHA USHTRASANA",
+    "image": "ARDHA_USHTRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 43,
+    "name": "BHADRASANA",
+    "image": "BHADRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 44,
+    "name": "MARJARI ASANA",
+    "image": "MARJARI_ASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 45,
+    "name": "PRANAMASANA",
+    "image": "PRANAMASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 46,
+    "name": "SHASHANKASANA",
+    "image": "SHASHANKASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 47,
+    "name": "SHASHANKASANA BHUJANGASANA",
+    "image": "SHASHANKASANA_BHUJANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 48,
+    "name": "SIMHAGARJANASANA",
+    "image": "SIMHAGARJANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 49,
+    "name": "SUPTA VAJRASANA",
+    "image": "SUPTA_VAJRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 50,
+    "name": "USTRASANA",
+    "image": "USTRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 51,
+    "name": "VAJRASANA",
+    "image": "VAJRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 52,
+    "name": "VEERASANA",
+    "image": "VEERASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 53,
+    "name": "VYAGHRASANA",
+    "image": "VYAGHRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS VAJRASANA"
+  },
+  {
+    "id": 54,
+    "name": "ARDHA PADMA PADMOTTANASANA",
+    "image": "ARDHA_PADMA_PADMOTTANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 55,
+    "name": "BAKA DHYANASANA",
+    "image": "BAKA_DHYANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 56,
+    "name": "BAKASANA",
+    "image": "BAKASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 57,
+    "name": "EKA HASTA BHUJANGASANA",
+    "image": "EKA_HASTA_BHUJANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 58,
+    "name": "EKA PADA PRANAMASANA",
+    "image": "EKA_PADA_PRANAMASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 59,
+    "name": "EKA PADASANA",
+    "image": "EKA_PADASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 60,
+    "name": "GARUDASANA",
+    "image": "GARUDASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 61,
+    "name": "MERUDANDASANA",
+    "image": "MERUDANDASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 62,
+    "name": "NATARAJASANA",
+    "image": "NATARAJASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 63,
+    "name": "SANTOLANASANA",
+    "image": "SANTOLANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 64,
+    "name": "UTTHITA HASTA PADANGUSTHASANA",
+    "image": "UTTHITA_HASTA_PADANGUSTHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS DE EQUILIBRIO"
+  },
+  {
+    "id": 65,
+    "name": "BHUMI PADA MASTAKASANA",
+    "image": "BHUMI_PADA_MASTAKASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 66,
+    "name": "DRUTA HALASANA",
+    "image": "DRUTA_HALASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 67,
+    "name": "HALASANA",
+    "image": "HALASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 68,
+    "name": "KAPALI ASANA",
+    "image": "KAPALI_ASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 69,
+    "name": "MOORDHASANA",
+    "image": "MOORDHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 70,
+    "name": "NIRALAMBA SIRSHASANA",
+    "image": "NIRALAMBA_SIRSHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 71,
+    "name": "PADA SARVANGASANA",
+    "image": "PADA_SARVANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 72,
+    "name": "POORWA HALASANA",
+    "image": "POORWA_HALASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 73,
+    "name": "SALAMBA SIRSHASANA",
+    "image": "SALAMBA_SIRSHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 74,
+    "name": "SARVANGASANA",
+    "image": "SARVANGASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 75,
+    "name": "SIRSHASANA",
+    "image": "SIRSHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 76,
+    "name": "VIPAREET KARANI ASANA",
+    "image": "VIPAREET_KARANI_ASANA.jpg",
+    "style": "HATHA YOGA - ASANAS INVERTIDAS"
+  },
+  {
+    "id": 77,
+    "name": "ASTAVAKRASANA",
+    "image": "ASTAVAKRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 78,
+    "name": "BHRAHMACHARYASANA",
+    "image": "BHRAHMACHARYASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 79,
+    "name": "DHANURAKARSHANASANA",
+    "image": "DHANURAKARSHANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 80,
+    "name": "EKA PADA SIRASANA",
+    "image": "EKA_PADA_SIRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 81,
+    "name": "GORAKSHASANA",
+    "image": "GORAKSHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 82,
+    "name": "HANUMANASANA",
+    "image": "HANUMANASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 83,
+    "name": "KASHYAPASANA",
+    "image": "KASHYAPASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 84,
+    "name": "KOORMASANA",
+    "image": "KOORMASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 85,
+    "name": "MAYURASANA",
+    "image": "MAYURASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 86,
+    "name": "MOOLABANDHASANA",
+    "image": "MOOLABANDHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 87,
+    "name": "PADMA MAYURASANA",
+    "image": "PADMA_MAYURASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 88,
+    "name": "POORNA MATSYENDRASANA",
+    "image": "POORNA_MATSYENDRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 89,
+    "name": "PRISHTHASANA",
+    "image": "PRISHTHASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 90,
+    "name": "VISHWAMITRASANA",
+    "image": "VISHWAMITRASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
+  },
+  {
+    "id": 91,
+    "name": "VRISCHIKASANA",
+    "image": "VRISCHIKASANA.jpg",
+    "style": "HATHA YOGA - ASANAS AVANZADAS"
   }
-
 ]

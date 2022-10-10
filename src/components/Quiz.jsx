@@ -52,7 +52,7 @@ export default function Quiz () {
   )
 }
 
-// TODO: Añadir toda la data | Fotos se alargan mucho
+// TODO: Fotos se alargan mucho
 
 /**
  * Posible features:
