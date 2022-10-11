@@ -96,6 +96,18 @@
   background-color: var(--primary-strong);
 }
 
+.container > .filters > .filter.filterNumber input::-webkit-outer-spin-button,
+.container > .filters > .filter.filterNumber input::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container > .filters > .filter.filterNumber input[type=number] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 @media(max-width: 600px) {
   .container > .answers {
     grid-template-columns: 1fr;

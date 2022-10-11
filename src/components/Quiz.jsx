@@ -70,7 +70,6 @@ export default function Quiz () {
                 defaultValue={questionsState.total}
                 min={1}
                 max={getPosesByStyle(questionsState.currentStyle).length}
-                readOnly
               />
               <span onClick={(e) => {
                 e.target.previousSibling.value < e.target.previousSibling.max && e.target.previousSibling.value++
@@ -98,6 +97,7 @@ export default function Quiz () {
 }
 
 // TODO: Hacer fotos quadradas
+// TODO: Arreglar responsive
 
 /**
  * Posible features:
