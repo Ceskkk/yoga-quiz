@@ -45,6 +45,57 @@
   transition: 0.7s;
 }
 
+.container > .filters {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.container > .filters > .filter {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.container > .filters > .filter:last-of-type {
+  margin-bottom: 3rem;
+}
+
+.container > .filters > .filter.filterNumber {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0 0.5rem;
+}
+
+.container > .filters > .filter.filterNumber > h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.container > .filters > .filter.filterNumber > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1rem - 4px) 1.5rem;
+  width: 30px;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: unset;
+  color: var(--text-secondary);
+  background-color: var(--primary);
+  box-shadow: 0 4px 0 0 var(--primary-strong);
+}
+
+.container > .filters > .filter.filterNumber > span:hover {
+  background-color: var(--primary-soft);
+}
+
+.container > .filters > .filter.filterNumber > span:active {
+  background-color: var(--primary-strong);
+}
+
 @media(max-width: 600px) {
   .container > .answers {
     grid-template-columns: 1fr;

@@ -3,7 +3,9 @@
   --primary: #2886F8;
   --primary-strong: #005af7;
 
-  --secondary: #ED2889;
+  --secondary-soft: #eea4c9;
+  --secondary: #e775ae;
+  --secondary-strong: #ED2889;
 
   --incorrect-soft: #f56b6b;
   --incorrect: #ff3e3e;
@@ -90,4 +92,21 @@ button.incorrect:hover {
 
 button.incorrect:active {
   background-color: var(--incorrect-strong);
+}
+
+select, input {
+  padding: 1rem;
+  border-radius: 5rem;
+  border: unset;
+  background-color: var(--primary);
+  color: var(--text-secondary);
+}
+
+select {
+  border-right: 1rem solid var(--primary);
+}
+
+select:focus,
+input:focus {
+  outline: 2px solid var(--primary-strong);
 }

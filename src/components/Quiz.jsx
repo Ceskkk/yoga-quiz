@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { QuizContext } from '../context/QuizContext'
 import Button from './Button'
+import { getAllStyles, getPosesByStyle } from '../services/poses'
 import styles from '../styles/Quiz.module.css'
 
 export default function Quiz () {
@@ -10,6 +11,7 @@ export default function Quiz () {
     questionsState,
     checkAnswer,
     nextQuestion,
+    setFilters,
     startQuiz
   } = useContext(QuizContext)
 
@@ -37,11 +39,54 @@ export default function Quiz () {
         </div>}
 
       {!isQuizOn &&
-        <Button clickHandler={startQuiz} type={questionsState.current ? 'incorrect' : 'correct'}>
-          {questionsState.current
-            ? 'Try again'
-            : 'Start Quiz'}
-        </Button>}
+        <>
+          <form className={styles.filters} onSubmit={(e) => startQuiz(e)}>
+            <div className={styles.filter}>
+              <h3>Asana Style</h3>
+              <select name='currentStyle' defaultValue={questionsState.currentStyle} onChange={(e) => setFilters(e)}>
+                <option value='all'>
+                  ALL ({getPosesByStyle('all').length})
+                </option>
+                {getAllStyles().map((yogaStyle, index) =>
+                  <option key={index} value={yogaStyle}>
+                    {yogaStyle} ({getPosesByStyle(yogaStyle).length})
+                  </option>
+                )}
+              </select>
+            </div>
+
+            <div className={`${styles.filter} ${styles.filterNumber}`}>
+              <h3>Number of questions</h3>
+              <span onClick={(e) => {
+                e.target.nextSibling.value > e.target.nextSibling.min && e.target.nextSibling.value--
+                e.target.nextSibling.click()
+              }}
+              >-
+              </span>
+              <input
+                onClick={(e) => setFilters(e)}
+                type='number'
+                name='total'
+                defaultValue={questionsState.total}
+                min={1}
+                max={getPosesByStyle(questionsState.currentStyle).length}
+                readOnly
+              />
+              <span onClick={(e) => {
+                e.target.previousSibling.value < e.target.previousSibling.max && e.target.previousSibling.value++
+                e.target.previousSibling.click()
+              }}
+              >+
+              </span>
+            </div>
+
+            <Button type={questionsState.current ? 'incorrect' : 'correct'}>
+              {questionsState.current
+                ? 'Try again'
+                : 'Start Quiz'}
+            </Button>
+          </form>
+        </>}
 
       {isAnswered && isQuizOn &&
         <Button clickHandler={nextQuestion} type='correct'>
@@ -52,11 +97,10 @@ export default function Quiz () {
   )
 }
 
-// TODO: Fotos se alargan mucho
+// TODO: Hacer fotos quadradas
 
 /**
  * Posible features:
- *  - Escoger el tipo de Yoga del cual hacer el Quiz
- *  - Dejar elegir el numero de preguntas y de respuestas
  *  - Botón de descarga del pdf
+ *  - Buscador de Asanas
  */

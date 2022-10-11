@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
+import { getPosesByStyle } from '../services/poses'
 import { NUMBER_OF_ANSWERS } from '../utils/const'
-import poses from '../data/poses.json'
 
 export const QuizContext = createContext()
 
@@ -8,7 +8,8 @@ export default function QuizProvider ({ children }) {
   const initialQuestionsState = {
     current: undefined,
     correct: undefined,
-    used: [0, 1],
+    currentStyle: 'all',
+    used: [],
     total: 10,
     currentCounter: 1,
     correctCounter: 0
@@ -17,15 +18,33 @@ export default function QuizProvider ({ children }) {
   const [isQuizOn, toggleQuiz] = useState(false)
   const [isAnswered, toggleAnswered] = useState(false)
 
-  const startQuiz = () => {
-    setQuestionsState(initialQuestionsState)
+  const startQuiz = (e) => {
+    e.preventDefault()
+    resetAllButFilters()
     updateQuestions()
     toggleQuiz(true)
+  }
+
+  const setFilters = (e) => {
+    resetAllButFilters()
+    setQuestionsState(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
+
+  const resetAllButFilters = () => {
+    setQuestionsState(prev => ({
+      ...initialQuestionsState,
+      currentStyle: prev.currentStyle,
+      total: prev.total
+    }))
   }
 
   const updateQuestions = () => {
     let correctQuestion
     const questions = new Set()
+    const poses = getPosesByStyle(questionsState.currentStyle)
 
     while (correctQuestion === undefined || Array.from(questionsState.used).includes(correctQuestion.id)) {
       correctQuestion = poses[Math.floor(Math.random() * poses.length)]
@@ -41,7 +60,7 @@ export default function QuizProvider ({ children }) {
       ...prev,
       current: Array.from(questions).sort((a, b) => a.id - b.id),
       correct: correctQuestion,
-      used: (prevUsed) => [...prevUsed, correctQuestion.id]
+      used: [...prev.used, correctQuestion.id]
     }))
     toggleAnswered(false)
   }
@@ -84,6 +103,7 @@ export default function QuizProvider ({ children }) {
         questionsState,
         checkAnswer,
         nextQuestion,
+        setFilters,
         startQuiz
       }}
     > {children}
