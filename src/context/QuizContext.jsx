@@ -91,6 +91,7 @@ export default function QuizProvider ({ children }) {
       }))
       updateQuestions()
     } else {
+      toggleAnswered(false)
       toggleQuiz(false)
     }
   }

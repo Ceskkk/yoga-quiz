@@ -58,7 +58,7 @@ export default function Quiz () {
             <div className={`${styles.filter} ${styles.filterNumber}`}>
               <h3>Number of questions</h3>
               <span onClick={(e) => {
-                e.target.nextSibling.value > e.target.nextSibling.min && e.target.nextSibling.value--
+                if (Number(e.target.nextSibling.value) > Number(e.target.nextSibling.min)) e.target.nextSibling.value--
                 e.target.nextSibling.click()
               }}
               >-
@@ -72,7 +72,7 @@ export default function Quiz () {
                 max={getPosesByStyle(questionsState.currentStyle).length}
               />
               <span onClick={(e) => {
-                e.target.previousSibling.value < e.target.previousSibling.max && e.target.previousSibling.value++
+                if (Number(e.target.previousSibling.value) < Number(e.target.previousSibling.max)) e.target.previousSibling.value++
                 e.target.previousSibling.click()
               }}
               >+
