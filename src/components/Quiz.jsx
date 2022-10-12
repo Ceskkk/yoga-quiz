@@ -30,7 +30,6 @@ export default function Quiz () {
           <img
             src={`/assets/${questionsState.correct.image}`}
             key={questionsState.correct.image}
-            onLoad='/gif/spinner.gif'
           />
         </div>}
 
@@ -102,7 +101,6 @@ export default function Quiz () {
 }
 
 // TODO: Arreglar responsive
-// TODO: Images cargan lentas
 
 /**
  * Posible features:
