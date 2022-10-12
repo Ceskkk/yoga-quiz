@@ -1,6 +1,7 @@
 import { useContext } from 'react'
-import { QuizContext } from '../context/QuizContext'
+
 import Button from './Button'
+import { QuizContext } from '../context/QuizContext'
 import { getAllStyles, getPosesByStyle } from '../services/poses'
 import styles from '../styles/Quiz.module.css'
 
@@ -96,8 +97,8 @@ export default function Quiz () {
   )
 }
 
-// TODO: Hacer fotos quadradas
 // TODO: Arreglar responsive
+// TODO: Images cargan lentas
 
 /**
  * Posible features:
