@@ -1,0 +1,35 @@
+.image {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 2rem;
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.answers.answered {
+  pointer-events: none;
+}
+
+.answers.answered > button {
+  transition: 0.7s;
+}
+
+@media(max-width: 600px) {
+  .answers {
+    grid-template-columns: 1fr;
+  }
+}
