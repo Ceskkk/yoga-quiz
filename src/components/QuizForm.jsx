@@ -14,7 +14,7 @@ export default function QuizForm () {
   } = useContext(QuizContext)
 
   return (
-    <form className={styles.filters}>
+    <form className={styles.filters} onSubmit={questionsState.current ? (e) => endQuiz(e) : (e) => startQuiz(e)}>
 
       {!questionsState.current && (
         <>
@@ -58,10 +58,7 @@ export default function QuizForm () {
         </>
       )}
 
-      <Button
-        type={questionsState.current ? 'incorrect' : 'correct'}
-        clickHandler={questionsState.current ? (e) => endQuiz(e) : (e) => startQuiz(e)}
-      >
+      <Button type={questionsState.current ? 'incorrect' : 'correct'}>
         {questionsState.current
           ? 'Try again'
           : 'Start Quiz'}
