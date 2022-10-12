@@ -27,7 +27,7 @@ export default function Quiz () {
 
       {isQuizOn &&
         <div className={styles.image}>
-          <img src={`/assets/${questionsState.correct.image}`} />
+          <img src={`/assets/${questionsState.correct.image}`} key={questionsState.correct.image} />
         </div>}
 
       {isQuizOn &&
