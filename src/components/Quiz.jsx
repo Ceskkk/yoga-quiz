@@ -17,9 +17,7 @@ export default function Quiz () {
 
       {questionsState.current && <QuizStatus />}
 
-      {isQuizOn && <Questions />}
-
-      {!isQuizOn && <QuizForm />}
+      {isQuizOn ? <Questions /> : <QuizForm />}
 
     </section>
   )
