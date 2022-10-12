@@ -20,13 +20,16 @@ export default function QuizProvider ({ children }) {
 
   const startQuiz = (e) => {
     e.preventDefault()
-    resetAllButFilters()
     updateQuestions()
     toggleQuiz(true)
   }
 
-  const setFilters = (e) => {
+  const endQuiz = (e) => {
+    e.preventDefault()
     resetAllButFilters()
+  }
+
+  const setFilters = (e) => {
     setQuestionsState(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -105,7 +108,8 @@ export default function QuizProvider ({ children }) {
         checkAnswer,
         nextQuestion,
         setFilters,
-        startQuiz
+        startQuiz,
+        endQuiz
       }}
     > {children}
     </QuizContext.Provider>
