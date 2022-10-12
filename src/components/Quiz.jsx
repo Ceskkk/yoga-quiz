@@ -27,7 +27,11 @@ export default function Quiz () {
 
       {isQuizOn &&
         <div className={styles.image}>
-          <img src={`/assets/${questionsState.correct.image}`} key={questionsState.correct.image} />
+          <img
+            src={`/assets/${questionsState.correct.image}`}
+            key={questionsState.correct.image}
+            onLoad='/gif/spinner.gif'
+          />
         </div>}
 
       {isQuizOn &&
